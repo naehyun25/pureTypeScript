@@ -55,3 +55,47 @@ let cats :{ name : string , age:number}=
 }
 
 console.log(cats);
+
+let unionRe : string | number | string[] = ["1","2"]; 
+unionRe = "안녕";
+unionRe = 1;
+//unionRe = true;
+
+type catType = [{
+    name:string;
+    age: number;
+    scla : boolean; 
+}, string ];
+
+let cat :catType;
+cat =  [{
+    name:"나초",
+    age:10,
+    scla : true 
+},
+"우리집고양이" ]
+
+console.log(cat);
+let catA : catType =[
+    {
+        name:"나초",
+        age:10,
+        scla : true 
+    },
+    "우리집고양이"
+]
+console.log(catA);
+
+function plus (a:number, b:number) : number {
+  return a+b;
+} 
+plus(1,3);
+
+const testIn = ["a","b","c"]
+function insert<T> (array : T[], value:number){
+    const insertB = [value, ...array];
+    console.log(insertB)
+    //console.log(insertB[0].split(""))
+    return insertB;
+}
+insert(testIn, 3);

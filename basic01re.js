@@ -40,3 +40,35 @@ let cats = {
     age: 5
 };
 console.log(cats);
+let unionRe = ["1", "2"];
+unionRe = "안녕";
+unionRe = 1;
+let cat;
+cat = [{
+        name: "나초",
+        age: 10,
+        scla: true
+    },
+    "우리집고양이"];
+console.log(cat);
+let catA = [
+    {
+        name: "나초",
+        age: 10,
+        scla: true
+    },
+    "우리집고양이"
+];
+console.log(catA);
+function plus(a, b) {
+    return a + b;
+}
+plus(1, 3);
+const testIn = ["a", "b", "c"];
+function insert(array, value) {
+    const insertB = [value, ...array];
+    console.log(insertB);
+    //console.log(insertB[0].split(""))
+    return insertB;
+}
+insert(testIn, 3);
